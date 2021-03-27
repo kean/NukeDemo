@@ -170,7 +170,7 @@ final class ImagePipelineSettingsViewController: UITableViewController {
             let formatter = ByteCountFormatter()
             formatter.countStyle = .binary
             dataCacheDataUsageCell.detailTextLabel?.text = "\(formatter.string(fromByteCount: Int64(dataCache.totalSize))) / \(formatter.string(fromByteCount: Int64(dataCache.sizeLimit)))"
-            dataCacheTotalCountCell.detailTextLabel?.text = "\(dataCache.totalCount) / \(dataCache.countLimit == Int.max ? "Unlimited" : "\(dataCache.countLimit)")"
+            dataCacheTotalCountCell.detailTextLabel?.text = "\(dataCache.totalCount)"
         } else if configuration.dataCache != nil {
             dataCacheDataUsageCell.detailTextLabel?.text = "Unknown"
             dataCacheTotalCountCell.detailTextLabel?.text = "Unknown"
