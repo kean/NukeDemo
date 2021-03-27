@@ -48,12 +48,11 @@ final class AnimatedImageViewController: UICollectionViewController, UICollectio
     // MARK: Collection View
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        case 0: return 1
         default: return imageURLs.count
         }
     }
