@@ -24,11 +24,7 @@ class BasicDemoViewController: UICollectionViewController, ImagePipelineSettings
 
         photos = demoPhotosURLs
 
-        if #available(iOS 13.0, *) {
-            collectionView?.backgroundColor = UIColor.systemBackground
-        } else {
-            collectionView?.backgroundColor = UIColor.white
-        }
+        collectionView?.backgroundColor = UIColor.systemBackground
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellReuseID)
 
         collectionView?.refreshControl = UIRefreshControl()
@@ -63,11 +59,7 @@ class BasicDemoViewController: UICollectionViewController, ImagePipelineSettings
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseID, for: indexPath)
-        if #available(iOS 13.0, *) {
-            cell.backgroundColor = UIColor.secondarySystemBackground
-        } else {
-            cell.backgroundColor = UIColor(white: 235.0 / 255.0, alpha: 1.0)
-        }
+        cell.backgroundColor = UIColor.secondarySystemBackground
 
         let imageView = imageViewForCell(cell)
         let request = makeRequest(with: photos[indexPath.row], cellSize: cell.bounds.size)

@@ -1,10 +1,6 @@
+// The MIT License (MIT)
 //
-//  SVGDemoViewController.swift
-//  NukeDemo
-//
-//  Created by Alexander Grebenyuk on 27.03.2021.
-//  Copyright © 2021 CocoaPods. All rights reserved.
-//
+// Copyright (c) 2015-2021 Alexander Grebenyuk (github.com/kean).
 
 import UIKit
 import Nuke
@@ -14,11 +10,7 @@ final class SwiftSVGDemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = UIColor.systemBackground
-        } else {
-            view.backgroundColor = UIColor.white
-        }
+        view.backgroundColor = UIColor.systemBackground
 
         ImageDecoderRegistry.shared.register { context in
             // Replace this with whatever works for. There are no magic numbers

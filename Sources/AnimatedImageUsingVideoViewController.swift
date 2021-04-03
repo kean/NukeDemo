@@ -24,11 +24,7 @@ final class AnimatedImageUsingVideoViewController: UICollectionViewController, U
         ImageDecoders.MP4.register()
 
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: imageCellReuseID)
-        if #available(iOS 13.0, *) {
-            collectionView.backgroundColor = UIColor.systemBackground
-        } else {
-            collectionView.backgroundColor = UIColor.white
-        }
+        collectionView.backgroundColor = UIColor.systemBackground
 
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -120,7 +116,7 @@ private final class VideoCell: UICollectionViewCell {
     }
 
     override init(frame: CGRect) {
-        spinner = UIActivityIndicatorView(style: .gray)
+        spinner = UIActivityIndicatorView(style: .medium)
 
         super.init(frame: frame)
 

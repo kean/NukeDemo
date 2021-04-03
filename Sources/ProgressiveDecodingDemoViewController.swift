@@ -23,11 +23,7 @@ final class ProgressiveDecodingDemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if #available(iOS 13.0, *) {
-             view.backgroundColor = UIColor.systemBackground
-         } else {
-             view.backgroundColor = UIColor.white
-         }
+        view.backgroundColor = UIColor.systemBackground
 
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.addTarget(self, action: #selector(_segmentedControlValueChanged(_:)), for: .valueChanged)
