@@ -9,7 +9,7 @@ private let cellReuseID = "reuseID"
 private var loggingEnabled = false
 
 final class PrefetchingDemoViewController: BasicDemoViewController, UICollectionViewDataSourcePrefetching {
-    let preheater = ImagePreheater()
+    let prefetcher = ImagePrefetcher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +18,23 @@ final class PrefetchingDemoViewController: BasicDemoViewController, UICollection
         collectionView?.prefetchDataSource = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        prefetcher.isPaused = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        prefetcher.isPaused = true
+    }
+
     // MARK: UICollectionViewDataSourcePrefetching
 
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         let urls = indexPaths.map { photos[$0.row] }
-        preheater.startPreheating(with: urls)
+        prefetcher.startPrefetching(with: urls)
         if loggingEnabled {
             print("prefetchItemsAt: \(stringForIndexPaths(indexPaths))")
         }
@@ -30,7 +42,7 @@ final class PrefetchingDemoViewController: BasicDemoViewController, UICollection
 
     func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
         let urls = indexPaths.map { photos[$0.row] }
-        preheater.stopPreheating(with: urls)
+        prefetcher.startPrefetching(with: urls)
         if loggingEnabled {
             print("cancelPrefetchingForItemsAt: \(stringForIndexPaths(indexPaths))")
         }
