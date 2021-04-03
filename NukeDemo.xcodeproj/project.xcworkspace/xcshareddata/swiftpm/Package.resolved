@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "ScrollViewPrefetcher",
+        "repositoryURL": "https://github.com/kean/ScrollViewPrefetcher",
+        "state": {
+          "branch": "main",
+          "revision": "65fd13d5a6dc90603ba71f9296402b507a192468",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftSVG",
         "repositoryURL": "https://github.com/mchoe/SwiftSVG.git",
         "state": {

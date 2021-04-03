@@ -14,7 +14,7 @@
 		0C4388A822AC060F007906A7 /* ImageProcessingDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4388A722AC060F007906A7 /* ImageProcessingDemoViewController.swift */; };
 		0C4878AA22A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4878A922A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift */; };
 		0C4878AC22A84EF900CFCFE7 /* ImagePipelineSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4878AB22A84EF900CFCFE7 /* ImagePipelineSettingsViewController.storyboard */; };
-		0C545B202618F7B50014EE23 /* ScrollViewPrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545B1F2618F7B50014EE23 /* ScrollViewPrefetcher.swift */; };
+		0C545B252618F9690014EE23 /* ScrollViewPrefetcher in Frameworks */ = {isa = PBXBuildFile; productRef = 0C545B242618F9690014EE23 /* ScrollViewPrefetcher */; };
 		0C880535242EB72E00F8C5B3 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 0C880534242EB72E00F8C5B3 /* SwiftSVG */; };
 		0C880537242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C880536242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift */; };
 		0C88053A242EB87100F8C5B3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 0C880539242EB87100F8C5B3 /* Nuke */; };
@@ -44,7 +44,6 @@
 		0C4388A722AC060F007906A7 /* ImageProcessingDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingDemoViewController.swift; sourceTree = "<group>"; };
 		0C4878A922A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePipelineSettingsViewController.swift; sourceTree = "<group>"; };
 		0C4878AB22A84EF900CFCFE7 /* ImagePipelineSettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagePipelineSettingsViewController.storyboard; sourceTree = "<group>"; };
-		0C545B1F2618F7B50014EE23 /* ScrollViewPrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPrefetcher.swift; sourceTree = "<group>"; };
 		0C880536242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGDemoViewController.swift; sourceTree = "<group>"; };
 		0CB1D1D62372FD4B0041D8D6 /* DFCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFCache.framework; path = Carthage/Build/iOS/DFCache.framework; sourceTree = "<group>"; };
 		0CB1D1DA2372FD580041D8D6 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 			files = (
 				0C1B4BB22618D0400095E7F7 /* FetchImage in Frameworks */,
 				0CB1D1D32372FC0C0041D8D6 /* Alamofire in Frameworks */,
+				0C545B252618F9690014EE23 /* ScrollViewPrefetcher in Frameworks */,
 				0C880535242EB72E00F8C5B3 /* SwiftSVG in Frameworks */,
 				0CC6F933242CF0C100BCE242 /* Gifu in Frameworks */,
 				0C88053A242EB87100F8C5B3 /* Nuke in Frameworks */,
@@ -132,7 +132,6 @@
 			children = (
 				0CCC188F209EDCCF003D7172 /* Utilities.swift */,
 				0CD878962431108200DE301A /* Images.swift */,
-				0C545B1F2618F7B50014EE23 /* ScrollViewPrefetcher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -186,6 +185,7 @@
 				0C880534242EB72E00F8C5B3 /* SwiftSVG */,
 				0C880539242EB87100F8C5B3 /* Nuke */,
 				0C1B4BB12618D0400095E7F7 /* FetchImage */,
+				0C545B242618F9690014EE23 /* ScrollViewPrefetcher */,
 			);
 			productName = Nuke;
 			productReference = 607FACD01AFB9204008FA782 /* NukeDemo_Example.app */;
@@ -223,6 +223,7 @@
 				0C880533242EB72E00F8C5B3 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
 				0C880538242EB87100F8C5B3 /* XCRemoteSwiftPackageReference "Nuke" */,
 				0C1B4BB02618D0400095E7F7 /* XCRemoteSwiftPackageReference "FetchImage" */,
+				0C545B232618F9690014EE23 /* XCRemoteSwiftPackageReference "ScrollViewPrefetcher" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -268,7 +269,6 @@
 				0CCC1898209EDCCF003D7172 /* DataCachingDemoViewController.swift in Sources */,
 				0CBBB09B20A8116C007474D2 /* AnimatedImageUsingVideoViewController.swift in Sources */,
 				0CCC189D209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift in Sources */,
-				0C545B202618F7B50014EE23 /* ScrollViewPrefetcher.swift in Sources */,
 				0C4388A822AC060F007906A7 /* ImageProcessingDemoViewController.swift in Sources */,
 				0CCC1894209EDCCF003D7172 /* BasicDemoViewController.swift in Sources */,
 			);
@@ -477,6 +477,14 @@
 				kind = branch;
 			};
 		};
+		0C545B232618F9690014EE23 /* XCRemoteSwiftPackageReference "ScrollViewPrefetcher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/ScrollViewPrefetcher";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		0C880533242EB72E00F8C5B3 /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mchoe/SwiftSVG.git";
@@ -516,6 +524,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C1B4BB02618D0400095E7F7 /* XCRemoteSwiftPackageReference "FetchImage" */;
 			productName = FetchImage;
+		};
+		0C545B242618F9690014EE23 /* ScrollViewPrefetcher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C545B232618F9690014EE23 /* XCRemoteSwiftPackageReference "ScrollViewPrefetcher" */;
+			productName = ScrollViewPrefetcher;
 		};
 		0C880534242EB72E00F8C5B3 /* SwiftSVG */ = {
 			isa = XCSwiftPackageProductDependency;
