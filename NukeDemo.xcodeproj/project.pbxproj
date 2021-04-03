@@ -14,6 +14,7 @@
 		0C4388A822AC060F007906A7 /* ImageProcessingDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4388A722AC060F007906A7 /* ImageProcessingDemoViewController.swift */; };
 		0C4878AA22A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4878A922A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift */; };
 		0C4878AC22A84EF900CFCFE7 /* ImagePipelineSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4878AB22A84EF900CFCFE7 /* ImagePipelineSettingsViewController.storyboard */; };
+		0C545B202618F7B50014EE23 /* ScrollViewPrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545B1F2618F7B50014EE23 /* ScrollViewPrefetcher.swift */; };
 		0C880535242EB72E00F8C5B3 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 0C880534242EB72E00F8C5B3 /* SwiftSVG */; };
 		0C880537242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C880536242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift */; };
 		0C88053A242EB87100F8C5B3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 0C880539242EB87100F8C5B3 /* Nuke */; };
@@ -43,6 +44,7 @@
 		0C4388A722AC060F007906A7 /* ImageProcessingDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingDemoViewController.swift; sourceTree = "<group>"; };
 		0C4878A922A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePipelineSettingsViewController.swift; sourceTree = "<group>"; };
 		0C4878AB22A84EF900CFCFE7 /* ImagePipelineSettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagePipelineSettingsViewController.storyboard; sourceTree = "<group>"; };
+		0C545B1F2618F7B50014EE23 /* ScrollViewPrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPrefetcher.swift; sourceTree = "<group>"; };
 		0C880536242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSVGDemoViewController.swift; sourceTree = "<group>"; };
 		0CB1D1D62372FD4B0041D8D6 /* DFCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFCache.framework; path = Carthage/Build/iOS/DFCache.framework; sourceTree = "<group>"; };
 		0CB1D1DA2372FD580041D8D6 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				0CCC188F209EDCCF003D7172 /* Utilities.swift */,
 				0CD878962431108200DE301A /* Images.swift */,
+				0C545B1F2618F7B50014EE23 /* ScrollViewPrefetcher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				0CCC1898209EDCCF003D7172 /* DataCachingDemoViewController.swift in Sources */,
 				0CBBB09B20A8116C007474D2 /* AnimatedImageUsingVideoViewController.swift in Sources */,
 				0CCC189D209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift in Sources */,
+				0C545B202618F7B50014EE23 /* ScrollViewPrefetcher.swift in Sources */,
 				0C4388A822AC060F007906A7 /* ImageProcessingDemoViewController.swift in Sources */,
 				0CCC1894209EDCCF003D7172 /* BasicDemoViewController.swift in Sources */,
 			);
