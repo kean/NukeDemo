@@ -33,7 +33,6 @@ struct PrefetchDemoView: View {
     }
 }
 
-
 @available(iOS 14.0, *)
 struct ImageView: View {
     let url: URL
