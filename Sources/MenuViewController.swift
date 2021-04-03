@@ -4,6 +4,7 @@
 
 import UIKit
 import Nuke
+import SwiftUI
 
 final class MenuViewController: UITableViewController {
     private var sections = [MenuSection]()
@@ -18,7 +19,7 @@ final class MenuViewController: UITableViewController {
     }
 
     private var generalSection: MenuSection {
-        MenuSection(title: "General", items: [
+        var items = [
             MenuItem(
                 title: "Image Pipeline",
                 subtitle: "The default pipeline, configurable at runtime",
@@ -35,11 +36,21 @@ final class MenuViewController: UITableViewController {
                 action: { [weak self] in self?.push(DataCachingDemoViewController(), $0) }
             ),
             MenuItem(
-                title: "Prefetching",
+                title: "Prefetch (UIKit)",
                 subtitle: "UICollectionView Prefetching",
                 action: { [weak self] in self?.push(PrefetchingDemoViewController(), $0) }
             )
-        ])
+        ]
+
+        if #available(iOS 14, *) {
+            items.append(MenuItem(
+                title: "Prefetch (SwiftUI)",
+                subtitle: "LazyVGrid and FetchImage",
+                action: { [weak self] in self?.push(UIHostingController(rootView: PrefetchDemoView()), $0) }
+            ))
+        }
+
+        return MenuSection(title: "General", items: items)
     }
 
     private var integrationSection:  MenuSection {

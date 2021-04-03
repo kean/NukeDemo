@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "FetchImage",
+        "repositoryURL": "https://github.com/kean/FetchImage.git",
+        "state": {
+          "branch": "master",
+          "revision": "68f136bc6c0f8ed3f5d4d97650a715dd2bbec0d1",
+          "version": null
+        }
+      },
+      {
         "package": "Gifu",
         "repositoryURL": "https://github.com/kaishin/Gifu.git",
         "state": {

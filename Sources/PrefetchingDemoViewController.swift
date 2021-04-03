@@ -6,7 +6,7 @@ import UIKit
 import Nuke
 
 private let cellReuseID = "reuseID"
-private var loggingEnabled = false
+private var loggingEnabled = true
 
 final class PrefetchingDemoViewController: BasicDemoViewController, UICollectionViewDataSourcePrefetching {
     let prefetcher = ImagePrefetcher()
