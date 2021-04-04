@@ -44,8 +44,8 @@ struct ImageView: View {
             Rectangle().fill(Color.gray)
             image.view?
                 .resizable()
-                .scaledToFill()
-
+                .aspectRatio(contentMode: .fill)
+                .clipped()
         }
         .onAppear { image.load(url) }
         .onDisappear(perform: image.reset)
