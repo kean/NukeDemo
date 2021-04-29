@@ -77,7 +77,7 @@ final class PrefetchDemoViewModel: ObservableObject, ScrollViewPrefetcherDelegat
 
     // MARK: ScrollViewPrefetcherDelegate
 
-    func getAllIndicesForPefetcher(_ prefetcher: ScrollViewPrefetcher) -> Range<Int> {
+    func getAllIndicesForPrefetcher(_ prefetcher: ScrollViewPrefetcher) -> Range<Int> {
         urls.indices
     }
 

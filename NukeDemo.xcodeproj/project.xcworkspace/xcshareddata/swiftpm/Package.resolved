@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
           "branch": null,
-          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
-          "version": "5.4.1"
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/kean/FetchImage.git",
         "state": {
           "branch": "master",
-          "revision": "68f136bc6c0f8ed3f5d4d97650a715dd2bbec0d1",
+          "revision": "127bb0afea5c9c6af3738c1cfb33974cd65fc0b2",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
           "branch": "master",
-          "revision": "d5dc8508633b462dd9bf415ec449fd55cdd3a1ae",
+          "revision": "b84cd35c4b9de64f96ec5085d6bbfa338eb24916",
           "version": null
         }
       },
@@ -42,7 +42,7 @@
         "repositoryURL": "https://github.com/kean/ScrollViewPrefetcher",
         "state": {
           "branch": "main",
-          "revision": "65fd13d5a6dc90603ba71f9296402b507a192468",
+          "revision": "36cdfa3e5c11423511c21cd7e4ddb5a27536d89d",
           "version": null
         }
       },
