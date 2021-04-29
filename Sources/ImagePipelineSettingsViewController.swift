@@ -5,7 +5,7 @@
 import UIKit
 import Nuke
 
-protocol ImagePipelineSettingsViewControllerDelegate: class {
+protocol ImagePipelineSettingsViewControllerDelegate: AnyObject {
     func imagePipelineSettingsViewController(_ vc: ImagePipelineSettingsViewController, didFinishWithConfiguration configuration: ImagePipeline.Configuration)
 }
 
