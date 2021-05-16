@@ -23,9 +23,9 @@
         "package": "Nuke",
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
-          "branch": "nuke10",
-          "revision": "c23450693f1cfaae8622c96b5d5c2d77e9cb59cf",
-          "version": null
+          "branch": null,
+          "revision": "171221e8f239d69e46a40e5e00965d3abbb4c146",
+          "version": "10.0.0-beta.1"
         }
       },
       {

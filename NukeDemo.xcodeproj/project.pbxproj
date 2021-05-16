@@ -485,8 +485,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
-				branch = nuke10;
-				kind = branch;
+				kind = exactVersion;
+				version = "10.0.0-beta.1";
 			};
 		};
 		0CB1D1D12372FC0C0041D8D6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
