@@ -14,7 +14,7 @@ final class ProgressiveDecodingDemoViewController: UIViewController {
     private let pipeline = ImagePipeline {
         $0.dataLoader = _MockDataLoader()
         $0.imageCache = nil
-        $0.isDeduplicationEnabled = false
+        $0.isTaskCoalescingEnabled = false
         $0.isProgressiveDecodingEnabled = true
     }
 
@@ -150,6 +150,10 @@ private final class _MockDataLoader: DataLoading {
             self?._sendData(chunks, didReceiveData: { didReceiveData($0, response) }, completion: completion)
         }
         return _MockTask()
+    }
+
+    func removeData(for request: URLRequest) {
+        // Do nothing
     }
 
     private func _sendData(_ data: [Data], didReceiveData: @escaping (Data) -> Void, completion: @escaping (Error?) -> Void) {

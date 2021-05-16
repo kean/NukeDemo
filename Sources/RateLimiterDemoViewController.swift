@@ -20,7 +20,7 @@ final class RateLimiterDemoViewController: BasicDemoViewController {
 
             $0.imageCache = nil // disable memory cache
 
-            $0.isDeduplicationEnabled = false // disable deduplication
+            $0.isTaskCoalescingEnabled = false // disable deduplication
         }
 
         for _ in 0..<10 {

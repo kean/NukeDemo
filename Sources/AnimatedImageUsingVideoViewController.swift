@@ -143,7 +143,7 @@ private final class VideoCell: UICollectionViewCell {
         let pipeline = ImagePipeline.shared
         let request = ImageRequest(url: url)
 
-        if let image = pipeline.cachedImage(for: request) {
+        if let image = pipeline.cache[request] {
             return display(image)
         }
 

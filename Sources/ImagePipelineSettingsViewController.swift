@@ -40,8 +40,6 @@ final class ImagePipelineSettingsViewController: UITableViewController {
     @IBOutlet weak var dataCacheEnabledSwitch: UISwitch!
     @IBOutlet weak var dataCacheDataUsageCell: UITableViewCell!
     @IBOutlet weak var dataCacheTotalCountCell: UITableViewCell!
-    @IBOutlet weak var dataCacheForOriginalImagesEnabledSwitch: UISwitch!
-    @IBOutlet weak var dataCacheForProcessedImagesEnabledSwitch: UISwitch!
     @IBOutlet weak var dataCacheButtonClear: UIButton!
 
     @IBOutlet weak var queueDataLoadingValueLabel: UILabel!
@@ -75,7 +73,7 @@ final class ImagePipelineSettingsViewController: UITableViewController {
 
     private func reload() {
         optionDecompressionEnabledSwitch.isOn = configuration.isDecompressionEnabled
-        optionDeduplicationEnabledSwitch.isOn = configuration.isDeduplicationEnabled
+        optionDeduplicationEnabledSwitch.isOn = configuration.isTaskCoalescingEnabled
         optionResumableDataEnabledSwitch.isOn = configuration.isResumableDataEnabled
         optionRateLimiterEnabledSwitch.isOn = configuration.isRateLimiterEnabled
         optionProgressiveDecodingEnabledSwitch.isOn = configuration.isProgressiveDecodingEnabled
@@ -114,10 +112,6 @@ final class ImagePipelineSettingsViewController: UITableViewController {
         dataCacheTitle.text = "Data Cache"
         dataCacheEnabledSwitch.isOn = configuration.dataCache != nil
         dataCacheButtonClear.isEnabled = configuration.dataCache != nil
-        dataCacheForOriginalImagesEnabledSwitch.isEnabled = configuration.dataCache != nil
-        dataCacheForOriginalImagesEnabledSwitch.isOn = configuration.dataCacheOptions.storedItems.contains(.originalImageData)
-        dataCacheForProcessedImagesEnabledSwitch.isEnabled = configuration.dataCache != nil
-        dataCacheForProcessedImagesEnabledSwitch.isOn = configuration.dataCacheOptions.storedItems.contains(.finalImage)
 
         if let _ = configuration.dataCache as? DataCache {
             // Do nothing
@@ -197,7 +191,7 @@ final class ImagePipelineSettingsViewController: UITableViewController {
     }
 
     @IBAction func switchDeduplicationEnabledValueChanged(_ sender: UISwitch) {
-        configuration.isDeduplicationEnabled = sender.isOn
+        configuration.isTaskCoalescingEnabled = sender.isOn
     }
 
     @IBAction func switchResumableDataEnabledTapped(_ sender: UISwitch) {
@@ -252,22 +246,6 @@ final class ImagePipelineSettingsViewController: UITableViewController {
     @IBAction func dataCacheSwitchValueChanged(_ sender: UISwitch) {
         configuration.dataCache = sender.isOn ? try? DataCache(name: "com.github.kean.Nuke.DataCache") : nil
         reloadDataCache()
-    }
-
-    @IBAction func optionDataCacheForOriginalImageDataEnabledValueChanged(_ sender: UISwitch) {
-        if sender.isOn {
-            configuration.dataCacheOptions.storedItems.insert(.originalImageData)
-        } else {
-            configuration.dataCacheOptions.storedItems.remove(.originalImageData)
-        }
-    }
-
-    @IBAction func optionDataCacheForProcessedImageDataEnabledValueChanged(_ sender: UISwitch) {
-        if sender.isOn {
-            configuration.dataCacheOptions.storedItems.insert(.finalImage)
-        } else {
-            configuration.dataCacheOptions.storedItems.remove(.finalImage)
-        }
     }
 
     @IBAction func dataCacheButtonClearTapped(_ sender: Any) {

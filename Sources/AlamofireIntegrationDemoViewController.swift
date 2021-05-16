@@ -49,6 +49,10 @@ public class AlamofireDataLoader: Nuke.DataLoading {
             task.cancel()
         }
     }
+
+    public func removeData(for request: URLRequest) {
+        // Do nothing
+    }
 }
 
 private final class AnyCancellable: Nuke.Cancellable {

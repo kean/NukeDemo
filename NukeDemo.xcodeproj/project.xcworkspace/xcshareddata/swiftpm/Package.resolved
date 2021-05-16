@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "FetchImage",
-        "repositoryURL": "https://github.com/kean/FetchImage.git",
-        "state": {
-          "branch": "master",
-          "revision": "127bb0afea5c9c6af3738c1cfb33974cd65fc0b2",
-          "version": null
-        }
-      },
-      {
         "package": "Gifu",
         "repositoryURL": "https://github.com/kaishin/Gifu.git",
         "state": {
@@ -32,8 +23,8 @@
         "package": "Nuke",
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
-          "branch": "master",
-          "revision": "b84cd35c4b9de64f96ec5085d6bbfa338eb24916",
+          "branch": "nuke10",
+          "revision": "c23450693f1cfaae8622c96b5d5c2d77e9cb59cf",
           "version": null
         }
       },

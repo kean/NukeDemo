@@ -4,7 +4,6 @@
 
 import Foundation
 import SwiftUI
-import FetchImage
 import ScrollViewPrefetcher
 import Nuke
 
