@@ -17,18 +17,6 @@ final class AnimatedImageViewController: UICollectionViewController, UICollectio
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        ImagePipeline.Configuration.isAnimatedImageDataEnabled = true
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        ImagePipeline.Configuration.isAnimatedImageDataEnabled = false
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
