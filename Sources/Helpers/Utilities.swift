@@ -43,7 +43,7 @@ struct _ProgressiveBlurImageProcessor: ImageProcessing, Hashable {
             return container // No processing.
         }
 
-        guard let scanNumber = container.userInfo[ImageDecoder.scanNumberKey] as? Int else {
+        guard let scanNumber = container.userInfo[.scanNumberKey] as? Int else {
             return container
         }
 
