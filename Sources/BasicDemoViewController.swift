@@ -54,7 +54,7 @@ class BasicDemoViewController: UICollectionViewController, ImagePipelineSettings
     // MARK: UICollectionView
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,17 +65,17 @@ class BasicDemoViewController: UICollectionViewController, ImagePipelineSettings
         let request = makeRequest(with: photos[indexPath.row], cellSize: cell.bounds.size)
         var options = makeImageLoadingOptions()
         options.pipeline = self.pipeline
-        loadImage(with: request, options: options, into: imageView)
+        Nuke.loadImage(with: request, options: options, into: imageView)
 
         return cell
     }
 
     func makeRequest(with url: URL, cellSize: CGSize) -> ImageRequest {
-        return ImageRequest(url: url)
+        ImageRequest(url: url)
     }
 
     func makeImageLoadingOptions() -> ImageLoadingOptions {
-        return ImageLoadingOptions(transition: .fadeIn(duration: 0.25))
+        ImageLoadingOptions(transition: .fadeIn(duration: 0.25))
     }
 
     func imageViewForCell(_ cell: UICollectionViewCell) -> UIImageView {
