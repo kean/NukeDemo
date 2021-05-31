@@ -34,29 +34,15 @@ final class MenuViewController: UITableViewController {
                 title: "Disk Cache",
                 subtitle: "Aggressive disk caching enabled",
                 action: { [weak self] in self?.push(DataCachingDemoViewController(), $0) }
-            ),
-            MenuItem(
-                title: "Prefetch (UIKit)",
-                subtitle: "UICollectionView Prefetching",
-                action: { [weak self] in self?.push(PrefetchingDemoViewController(), $0) }
             )
         ]
-
         if #available(iOS 14, *) {
-            items.append(MenuItem(
-                title: "Prefetch (SwiftUI)",
-                subtitle: "LazyVGrid and FetchImage",
-                action: { [weak self] in self?.push(UIHostingController(rootView: PrefetchDemoView()), $0) }
-            ))
-        }
-        if #available(iOS 13, *) {
             items.append(MenuItem(
                 title: "NukeUI",
                 subtitle: "LazyImage demo",
                 action: { [weak self] in self?.push(UIHostingController(rootView: LazyImageDemoView()), $0) }
             ))
         }
-
         return MenuSection(title: "General", items: items)
     }
 
@@ -81,7 +67,21 @@ final class MenuViewController: UITableViewController {
     }
 
     private var advancedSection: MenuSection {
-        MenuSection(title: "Advanced", items: [
+        var items = [
+            MenuItem(
+                title: "Prefetch (UIKit)",
+                subtitle: "UICollectionView Prefetching",
+                action: { [weak self] in self?.push(PrefetchingDemoViewController(), $0) }
+            )
+        ]
+        if #available(iOS 14, *) {
+            items.append(MenuItem(
+                title: "Prefetch (SwiftUI)",
+                subtitle: "LazyVGrid and FetchImage",
+                action: { [weak self] in self?.push(UIHostingController(rootView: PrefetchDemoView()), $0) }
+            ))
+        }
+        items += [
             MenuItem(
                 title: "Progressive JPEG",
                 subtitle: "Progressive vs baseline JPEG",
@@ -97,7 +97,9 @@ final class MenuViewController: UITableViewController {
                 subtitle: "Replaces GIFs with MP4",
                 action: { [weak self] in self?.push(AnimatedImageUsingVideoViewController(), $0)
             })
-        ])
+        ]
+
+        return MenuSection(title: "Advanced", items: items)
     }
 
     private func push(_ controller: UIViewController, _ item: MenuItem) {
