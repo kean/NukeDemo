@@ -49,6 +49,13 @@ final class MenuViewController: UITableViewController {
                 action: { [weak self] in self?.push(UIHostingController(rootView: PrefetchDemoView()), $0) }
             ))
         }
+        if #available(iOS 13, *) {
+            items.append(MenuItem(
+                title: "NukeUI",
+                subtitle: "LazyImage demo",
+                action: { [weak self] in self?.push(UIHostingController(rootView: LazyImageDemoView()), $0) }
+            ))
+        }
 
         return MenuSection(title: "General", items: items)
     }

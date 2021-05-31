@@ -12,7 +12,7 @@
       },
       {
         "package": "Gifu",
-        "repositoryURL": "https://github.com/kaishin/Gifu.git",
+        "repositoryURL": "https://github.com/kaishin/Gifu",
         "state": {
           "branch": null,
           "revision": "0ffe24744cc3d82ab9edece53670d0352c6d5507",
@@ -25,6 +25,15 @@
         "state": {
           "branch": "master",
           "revision": "6459b8637e4cbaf8bb8d52f708c683a79f85e679",
+          "version": null
+        }
+      },
+      {
+        "package": "NukeUI",
+        "repositoryURL": "https://github.com/kean/NukeUI",
+        "state": {
+          "branch": "main",
+          "revision": "1cdc8f9fa49415001f2635988d4ff9aae9aa55f3",
           "version": null
         }
       },
