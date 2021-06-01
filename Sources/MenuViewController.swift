@@ -38,8 +38,8 @@ final class MenuViewController: UITableViewController {
         ]
         if #available(iOS 13, *) {
             items.append(MenuItem(
-                title: "LazyImage (SwiftUI)",
-                subtitle: "NukeUI package demo",
+                title: "LazyImage",
+                subtitle: "NukeUI package demo (SwiftUI)",
                 action: { [weak self] in self?.push(UIHostingController(rootView: LazyImageDemoView()), $0) }
             ))
         }
