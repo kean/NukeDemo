@@ -42,7 +42,7 @@ struct LazyImageDemoView: View {
         LazyImage(source: url)
             .transition(.fadeIn(duration: 0.33))
             .pipeline(pipeline)
-            .configure {
+            .onCreated {
                 $0.isExperimentalVideoSupportEnabled = true
             }
             .frame(height: 320)
