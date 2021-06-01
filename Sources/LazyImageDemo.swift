@@ -4,7 +4,6 @@
 
 import SwiftUI
 import NukeUI
-import Nuke
 
 @available(iOS 13.0, *)
 struct LazyImageDemoView: View {

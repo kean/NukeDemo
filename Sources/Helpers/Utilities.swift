@@ -25,6 +25,8 @@ extension UIView {
     }
 }
 
+typealias DataLoader = Nuke.DataLoader
+
 // MARK: Core Image Integrations
 
 /// Blurs image using CIGaussianBlur filter. Only blurs first scans of the
