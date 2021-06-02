@@ -6,6 +6,7 @@ import Foundation
 import SwiftUI
 import ScrollViewPrefetcher
 import Nuke
+import NukeUI
 
 // MARK: - View
 
@@ -20,34 +21,14 @@ struct PrefetchDemoView: View {
                 let item = GridItem(.fixed(side), spacing: 2)
                 LazyVGrid(columns: Array(repeating: item, count: 4), spacing: 2) {
                     ForEach(demoPhotosURLs.indices) { index in
-                        ImageView(url: demoPhotosURLs[index])
+                        LazyImage(source: demoPhotosURLs[index])
                             .frame(width: side, height: side)
-                            .clipped()
                             .onAppear { model.onAppear(index) }
                             .onDisappear { model.onDisappear(index) }
                     }
                 }
             }
         }
-    }
-}
-
-@available(iOS 14.0, *)
-struct ImageView: View {
-    let url: URL
-
-    @StateObject private var image = FetchImage()
-
-    var body: some View {
-        ZStack {
-            Rectangle().fill(Color.gray)
-            image.view?
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipped()
-        }
-        .onAppear { image.load(url) }
-        .onDisappear(perform: image.reset)
     }
 }
 
