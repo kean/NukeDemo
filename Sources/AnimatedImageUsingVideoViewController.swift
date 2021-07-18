@@ -76,7 +76,6 @@ private final class VideoCell: UICollectionViewCell {
         imageView.pinToSuperview()
 
         imageView.placeholderView = UIActivityIndicatorView(style: .medium)
-        imageView.isExperimentalVideoSupportEnabled = true
     }
 
     required init?(coder aDecoder: NSCoder) {

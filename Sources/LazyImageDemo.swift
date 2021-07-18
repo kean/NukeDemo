@@ -5,13 +5,12 @@
 import SwiftUI
 import NukeUI
 
-@available(iOS 13.0, *)
+@available(iOS 14.0, *)
 struct LazyImageDemoView: View {
     private let items = allItems
     @State private var listId = UUID()
 
     private let pipeline = ImagePipeline {
-        $0.isProgressiveDecodingEnabled = true
         $0.dataLoader = {
             let config = URLSessionConfiguration.default
             config.urlCache = nil
@@ -40,11 +39,8 @@ struct LazyImageDemoView: View {
     // This is where the image view is created.
     func makeImage(url: URL) -> some View {
         LazyImage(source: url)
-            .transition(.fadeIn(duration: 0.33))
+            .animation(.default)
             .pipeline(pipeline)
-            .onCreated {
-                $0.isExperimentalVideoSupportEnabled = true
-            }
             .frame(height: 320)
     }
 }
