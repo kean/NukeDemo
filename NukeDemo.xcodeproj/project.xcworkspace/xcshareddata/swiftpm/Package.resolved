@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
           "branch": "master",
-          "revision": "50fa26ab3b3c3974a6d2830d4ab009d3c6f59fc4",
+          "revision": "f17a37dd84a4426295d842dcbb307f397431d046",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/kean/NukeUI",
         "state": {
           "branch": "main",
-          "revision": "f35e7e5b038a8cfddc3eb96bf9455bb3a3b58788",
+          "revision": "41a4d68121a0b1000202528e791209ae7432db52",
           "version": null
         }
       },
