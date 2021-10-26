@@ -34,6 +34,7 @@ struct LazyImageDemoView: View {
         }, label: {
             Image(systemName: "arrow.clockwise")
         }))
+        .listStyle(PlainListStyle())
     }
 
     // This is where the image view is created.
