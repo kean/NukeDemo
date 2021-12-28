@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
           "branch": null,
-          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
-          "version": "5.4.4"
+          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+          "version": "5.5.0"
         }
       },
       {
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
           "branch": "master",
-          "revision": "472a03c15f39592007d94f25abe554350bc8aa2b",
+          "revision": "52f21dce12fae2abd47a7b86192628b6ee69033c",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/kean/NukeUI",
         "state": {
           "branch": "main",
-          "revision": "d3cddddbae808ae7ff1b6659fe0ce0eb6471f36e",
+          "revision": "593ad30b9098b1227353bdc878221df78b025dd1",
           "version": null
         }
       },
