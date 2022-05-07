@@ -1,61 +1,59 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
-        "state": {
-          "branch": null,
-          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
-          "version": "5.5.0"
-        }
-      },
-      {
-        "package": "Gifu",
-        "repositoryURL": "https://github.com/kaishin/Gifu",
-        "state": {
-          "branch": null,
-          "revision": "51f2eab32903e336f590c013267cfa4d7f8b06c4",
-          "version": "3.3.1"
-        }
-      },
-      {
-        "package": "Nuke",
-        "repositoryURL": "https://github.com/kean/Nuke",
-        "state": {
-          "branch": "master",
-          "revision": "52f21dce12fae2abd47a7b86192628b6ee69033c",
-          "version": null
-        }
-      },
-      {
-        "package": "NukeUI",
-        "repositoryURL": "https://github.com/kean/NukeUI",
-        "state": {
-          "branch": "main",
-          "revision": "593ad30b9098b1227353bdc878221df78b025dd1",
-          "version": null
-        }
-      },
-      {
-        "package": "ScrollViewPrefetcher",
-        "repositoryURL": "https://github.com/kean/ScrollViewPrefetcher",
-        "state": {
-          "branch": "main",
-          "revision": "36cdfa3e5c11423511c21cd7e4ddb5a27536d89d",
-          "version": null
-        }
-      },
-      {
-        "package": "SwiftSVG",
-        "repositoryURL": "https://github.com/mchoe/SwiftSVG.git",
-        "state": {
-          "branch": null,
-          "revision": "c3a8866a25ace169ee8e5c037670ba14aa59606f",
-          "version": "2.3.2"
-        }
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "354dda32d89fc8cd4f5c46487f64957d355f53d8",
+        "version" : "5.6.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "gifu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kaishin/Gifu",
+      "state" : {
+        "revision" : "51f2eab32903e336f590c013267cfa4d7f8b06c4",
+        "version" : "3.3.1"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke",
+      "state" : {
+        "branch" : "master",
+        "revision" : "dd5068b0b5d33aae7ad2e940df8697893ff75ce4"
+      }
+    },
+    {
+      "identity" : "nukeui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/NukeUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a7a8b21913d92bc183af10dfca2861a67d44a709"
+      }
+    },
+    {
+      "identity" : "scrollviewprefetcher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/ScrollViewPrefetcher",
+      "state" : {
+        "branch" : "main",
+        "revision" : "36cdfa3e5c11423511c21cd7e4ddb5a27536d89d"
+      }
+    },
+    {
+      "identity" : "swiftsvg",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mchoe/SwiftSVG.git",
+      "state" : {
+        "revision" : "c3a8866a25ace169ee8e5c037670ba14aa59606f",
+        "version" : "2.3.2"
+      }
+    }
+  ],
+  "version" : 2
 }
