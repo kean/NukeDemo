@@ -12,7 +12,7 @@ class BasicDemoViewController: UICollectionViewController, ImagePipelineSettings
     var itemsPerRow: Int = 4
 
     init(collectionViewLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()) {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        super.init(collectionViewLayout: collectionViewLayout)
     }
 
     required init?(coder: NSCoder) {
