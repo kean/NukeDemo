@@ -42,7 +42,7 @@ final class PrefetchingDemoViewController: BasicDemoViewController, UICollection
 
     func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
         let urls = indexPaths.map { photos[$0.row] }
-        prefetcher.startPrefetching(with: urls)
+        prefetcher.stopPrefetching(with: urls)
         if loggingEnabled {
             print("cancelPrefetchingForItemsAt: \(stringForIndexPaths(indexPaths))")
         }
