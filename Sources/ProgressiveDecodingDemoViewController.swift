@@ -4,6 +4,7 @@
 
 import UIKit
 import Nuke
+import NukeExtensions
 
 final class ProgressiveDecodingDemoViewController: UIViewController {
     private let urls = [

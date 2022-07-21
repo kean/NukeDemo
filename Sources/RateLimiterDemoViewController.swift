@@ -4,6 +4,7 @@
 
 import UIKit
 import Nuke
+import NukeExtensions
 
 private let cellReuseID = "reuseID"
 

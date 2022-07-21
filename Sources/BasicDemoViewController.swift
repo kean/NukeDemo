@@ -4,6 +4,7 @@
 
 import UIKit
 import Nuke
+import NukeExtensions
 
 /// A base view controller.
 class BasicDemoViewController: UICollectionViewController, ImagePipelineSettingsViewControllerDelegate {
@@ -65,7 +66,7 @@ class BasicDemoViewController: UICollectionViewController, ImagePipelineSettings
         let request = makeRequest(with: photos[indexPath.row], cellSize: cell.bounds.size)
         var options = makeImageLoadingOptions()
         options.pipeline = self.pipeline
-        Nuke.loadImage(with: request, options: options, into: imageView)
+        NukeExtensions.loadImage(with: request, options: options, into: imageView)
 
         return cell
     }

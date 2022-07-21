@@ -6,6 +6,7 @@ import SwiftUI
 import NukeUI
 
 @available(iOS 14.0, *)
+@MainActor
 struct LazyImageDemoView: View {
     private let items = allItems
     @State private var listId = UUID()
@@ -39,7 +40,7 @@ struct LazyImageDemoView: View {
 
     // This is where the image view is created.
     func makeImage(url: URL) -> some View {
-        LazyImage(source: url)
+        LazyImage(url: url)
             .animation(.default)
             .pipeline(pipeline)
             .frame(height: 320)

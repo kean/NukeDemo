@@ -4,7 +4,7 @@
 
 import UIKit
 import Nuke
-import Alamofire
+@preconcurrency import Alamofire
 
 final class AlamofireIntegrationDemoViewController: BasicDemoViewController {
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ final class AlamofireIntegrationDemoViewController: BasicDemoViewController {
 }
 
 /// Implements data loading using Alamofire framework.
-public class AlamofireDataLoader: Nuke.DataLoading {
+public final class AlamofireDataLoader: Nuke.DataLoading {
     public let session: Alamofire.Session
 
     /// Initializes the receiver with a given Alamofire.SessionManager.
@@ -56,9 +56,9 @@ public class AlamofireDataLoader: Nuke.DataLoading {
 }
 
 private final class AnyCancellable: Nuke.Cancellable {
-    let closure: () -> Void
+    let closure: @Sendable () -> Void
 
-    init(_ closure: @escaping () -> Void) {
+    init(_ closure: @Sendable @escaping () -> Void) {
         self.closure = closure
     }
 

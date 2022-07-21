@@ -21,7 +21,7 @@ struct PrefetchDemoView: View {
                 let item = GridItem(.fixed(side), spacing: 2)
                 LazyVGrid(columns: Array(repeating: item, count: 4), spacing: 2) {
                     ForEach(0..<demoPhotosURLs.count, id: \.self) { index in
-                        LazyImage(source: demoPhotosURLs[index])
+                        LazyImage(url: demoPhotosURLs[index])
                             .frame(width: side, height: side)
                             .onAppear { model.onAppear(index) }
                             .onDisappear { model.onDisappear(index) }

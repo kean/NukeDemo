@@ -3,8 +3,7 @@
 // Copyright (c) 2015-2021 Alexander Grebenyuk (github.com/kean).
 
 import UIKit
-import Nuke
-import Gifu
+import NukeUI
 
 // MARK: - AnimatedImageViewController
 
@@ -72,12 +71,12 @@ private let imageURLs = [
 // MARK: - AnimatedImageCell
 
 private final class AnimatedImageCell: UICollectionViewCell {
-    private let imageView: GIFImageView
+    private let imageView: LazyImageView
     private let spinner: UIActivityIndicatorView
-    private var task: ImageTask?
 
     override init(frame: CGRect) {
-        imageView = GIFImageView()
+        imageView = LazyImageView()
+        imageView.placeholderView = UIActivityIndicatorView(style: .medium)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
 
@@ -99,41 +98,12 @@ private final class AnimatedImageCell: UICollectionViewCell {
     }
 
     func setImage(with url: URL) {
-        let pipeline = ImagePipeline.shared
-        let request = ImageRequest(url: url)
-
-        if let image = pipeline.cache[request] {
-            return display(image)
-        }
-
-        spinner.startAnimating()
-        task = pipeline.loadImage(with: request) { [weak self] result in
-            self?.spinner.stopAnimating()
-            if case let .success(response) = result {
-                self?.display(response.container)
-                self?.animateFadeIn()
-            }
-        }
-    }
-
-    private func display(_ container: Nuke.ImageContainer) {
-        if let data = container.data {
-            imageView.animate(withGIFData: data)
-        } else {
-            imageView.image = container.image
-        }
-    }
-
-    private func animateFadeIn() {
-        imageView.alpha = 0
-        UIView.animate(withDuration: 0.33) { self.imageView.alpha = 1 }
+        imageView.url = url
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        task?.cancel()
-        spinner.stopAnimating()
-        imageView.prepareForReuse()
+        imageView.reset()
     }
 }

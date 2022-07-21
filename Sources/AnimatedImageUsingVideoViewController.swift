@@ -89,6 +89,6 @@ private final class VideoCell: UICollectionViewCell {
     }
 
     func setVideo(with url: URL) {
-        imageView.source = url
+        imageView.url = url
     }
 }
