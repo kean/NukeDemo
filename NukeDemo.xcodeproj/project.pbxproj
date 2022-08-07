@@ -32,6 +32,8 @@
 		0CCC189D209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC1893209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift */; };
 		0CCC18A3209EE0A6003D7172 /* AnimatedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC18A2209EE0A6003D7172 /* AnimatedImageViewController.swift */; };
 		0CCC18A8209EE341003D7172 /* AlamofireIntegrationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC18A7209EE341003D7172 /* AlamofireIntegrationDemoViewController.swift */; };
+		0CCF787D28A03BDC00C431E5 /* PulseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCF787C28A03BDC00C431E5 /* PulseCore */; };
+		0CCF787F28A03BDC00C431E5 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCF787E28A03BDC00C431E5 /* PulseUI */; };
 		0CD878972431108200DE301A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD878962431108200DE301A /* Images.swift */; };
 		0CE5F687215688590046609F /* PrefetchingDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5F686215688590046609F /* PrefetchingDemoViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 				0C895239288A07A3003BC1C2 /* Alamofire in Frameworks */,
 				0C895232288A0777003BC1C2 /* Nuke in Frameworks */,
 				0C895234288A0777003BC1C2 /* NukeExtensions in Frameworks */,
+				0CCF787F28A03BDC00C431E5 /* PulseUI in Frameworks */,
+				0CCF787D28A03BDC00C431E5 /* PulseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +193,8 @@
 				0C895233288A0777003BC1C2 /* NukeExtensions */,
 				0C895235288A0777003BC1C2 /* NukeUI */,
 				0C895238288A07A3003BC1C2 /* Alamofire */,
+				0CCF787C28A03BDC00C431E5 /* PulseCore */,
+				0CCF787E28A03BDC00C431E5 /* PulseUI */,
 			);
 			productName = Nuke;
 			productReference = 607FACD01AFB9204008FA782 /* NukeDemo_Example.app */;
@@ -225,6 +231,7 @@
 				0C545B232618F9690014EE23 /* XCRemoteSwiftPackageReference "ScrollViewPrefetcher" */,
 				0C895230288A0777003BC1C2 /* XCRemoteSwiftPackageReference "Nuke" */,
 				0C895237288A07A3003BC1C2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0CCF787B28A03BDC00C431E5 /* XCRemoteSwiftPackageReference "Pulse" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -491,7 +498,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
-				branch = master;
+				branch = "data-loader-delegate";
 				kind = branch;
 			};
 		};
@@ -501,6 +508,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
+			};
+		};
+		0CCF787B28A03BDC00C431E5 /* XCRemoteSwiftPackageReference "Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Pulse";
+			requirement = {
+				branch = "pulse-2.0";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -535,6 +550,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C895237288A07A3003BC1C2 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		0CCF787C28A03BDC00C431E5 /* PulseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CCF787B28A03BDC00C431E5 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseCore;
+		};
+		0CCF787E28A03BDC00C431E5 /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CCF787B28A03BDC00C431E5 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

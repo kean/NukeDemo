@@ -5,6 +5,8 @@
 import UIKit
 import Nuke
 import SwiftUI
+import PulseCore
+import PulseUI
 
 final class MenuViewController: UITableViewController {
     private var sections = [MenuSection]()
@@ -15,7 +17,11 @@ final class MenuViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Network Logs", style: .plain, target: self, action: #selector(showNetworkLogs))
+
         sections = [generalSection, integrationSection, advancedSection]
+
+        (ImagePipeline.shared.configuration.dataLoader as? DataLoader)?.delegate = URLSessionProxyDelegate()
     }
 
     private var generalSection: MenuSection {
@@ -105,6 +111,10 @@ final class MenuViewController: UITableViewController {
     private func push(_ controller: UIViewController, _ item: MenuItem) {
         controller.title = item.title
         navigationController?.pushViewController(controller, animated: true)
+    }
+
+    @objc private func showNetworkLogs() {
+        present(MainViewController(), animated: true)
     }
 
     // MARK: Table View
