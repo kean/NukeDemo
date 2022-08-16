@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke",
       "state" : {
-        "branch" : "data-loader-delegate",
-        "revision" : "9c16b829998c8a1747e867e99beeb56836f4a264"
+        "branch" : "master",
+        "revision" : "34fbc2a3108d1e9373e54c490076391863d60917"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Pulse",
       "state" : {
-        "branch" : "pulse-2.0",
-        "revision" : "89d93bff2441ef7b6d8a28b39bb858dc419e1581"
+        "branch" : "master",
+        "revision" : "9e7e90880a5d6fa48316dadc8415363c0b59e730"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
-        "version" : "1.4.2"
+        "revision" : "6fe203dc33195667ce1759bf0182975e4653ba1c",
+        "version" : "1.4.4"
       }
     },
     {

@@ -5,7 +5,7 @@
 import UIKit
 import Nuke
 import SwiftUI
-import PulseCore
+import Pulse
 import PulseUI
 
 final class MenuViewController: UITableViewController {
