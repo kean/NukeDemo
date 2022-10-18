@@ -28,15 +28,6 @@
       }
     },
     {
-      "identity" : "scrollviewprefetcher",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kean/ScrollViewPrefetcher",
-      "state" : {
-        "branch" : "main",
-        "revision" : "36cdfa3e5c11423511c21cd7e4ddb5a27536d89d"
-      }
-    },
-    {
       "identity" : "swift-log",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
