@@ -15,7 +15,7 @@
       "location" : "https://github.com/kean/Nuke",
       "state" : {
         "branch" : "master",
-        "revision" : "f5a9d68fa3400bc478fde745fcd135e11a9e6800"
+        "revision" : "1523539699fc352a3d043b5f3a5418620fb33809"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/kean/Pulse",
       "state" : {
         "branch" : "master",
-        "revision" : "f0dcee7f1e5dac0213aeaa526565f2ab75aa18f0"
+        "revision" : "18d9e6328369b7fb50602dd5f3289f4543cbff63"
       }
     },
     {
