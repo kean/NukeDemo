@@ -5,7 +5,6 @@
 import SwiftUI
 import NukeUI
 
-@available(iOS 14.0, *)
 @MainActor
 struct LazyImageDemoView: View {
     private let items = allItems

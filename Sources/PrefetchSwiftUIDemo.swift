@@ -9,7 +9,6 @@ import NukeUI
 
 // MARK: - View
 
-@available(iOS 14.0, *)
 struct PrefetchDemoView: View {
     @StateObject var model = PrefetchDemoViewModel()
 

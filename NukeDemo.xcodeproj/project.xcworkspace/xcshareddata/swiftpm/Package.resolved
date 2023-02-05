@@ -15,7 +15,7 @@
       "location" : "https://github.com/kean/Nuke",
       "state" : {
         "branch" : "master",
-        "revision" : "1523539699fc352a3d043b5f3a5418620fb33809"
+        "revision" : "707b8247c6ac4501873086889dbf4e0439bd7455"
       }
     },
     {
@@ -24,16 +24,7 @@
       "location" : "https://github.com/kean/Pulse",
       "state" : {
         "branch" : "master",
-        "revision" : "18d9e6328369b7fb50602dd5f3289f4543cbff63"
-      }
-    },
-    {
-      "identity" : "swift-log",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-log.git",
-      "state" : {
-        "revision" : "6fe203dc33195667ce1759bf0182975e4653ba1c",
-        "version" : "1.4.4"
+        "revision" : "79853a6c9549ef3168c4763427281ffb7571b065"
       }
     },
     {

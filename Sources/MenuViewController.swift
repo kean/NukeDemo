@@ -42,13 +42,11 @@ final class MenuViewController: UITableViewController {
                 action: { [weak self] in self?.push(DataCachingDemoViewController(), $0) }
             )
         ]
-        if #available(iOS 14, *) {
-            items.append(MenuItem(
-                title: "LazyImage",
-                subtitle: "NukeUI package demo (SwiftUI)",
-                action: { [weak self] in self?.push(UIHostingController(rootView: LazyImageDemoView()), $0) }
-            ))
-        }
+        items.append(MenuItem(
+            title: "LazyImage",
+            subtitle: "NukeUI package demo (SwiftUI)",
+            action: { [weak self] in self?.push(UIHostingController(rootView: LazyImageDemoView()), $0) }
+        ))
         return MenuSection(title: "General", items: items)
     }
 
@@ -80,13 +78,11 @@ final class MenuViewController: UITableViewController {
                 action: { [weak self] in self?.push(PrefetchingDemoViewController(), $0) }
             )
         ]
-        if #available(iOS 14, *) {
-            items.append(MenuItem(
-                title: "Prefetch (SwiftUI)",
-                subtitle: "LazyVGrid and FetchImage",
-                action: { [weak self] in self?.push(UIHostingController(rootView: PrefetchDemoView()), $0) }
-            ))
-        }
+        items.append(MenuItem(
+            title: "Prefetch (SwiftUI)",
+            subtitle: "LazyVGrid and FetchImage",
+            action: { [weak self] in self?.push(UIHostingController(rootView: PrefetchDemoView()), $0) }
+        ))
         items += [
             MenuItem(
                 title: "Progressive JPEG",
