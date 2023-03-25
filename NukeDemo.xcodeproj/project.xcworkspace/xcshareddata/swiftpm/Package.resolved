@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke",
       "state" : {
-        "branch" : "master",
-        "revision" : "707b8247c6ac4501873086889dbf4e0439bd7455"
+        "branch" : "main",
+        "revision" : "88f73104e35abbb85d12c0921f72bd99651812e2"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Pulse",
       "state" : {
-        "branch" : "master",
-        "revision" : "79853a6c9549ef3168c4763427281ffb7571b065"
+        "branch" : "main",
+        "revision" : "5825eab1faf61865745beb43906e2b82cf4a68a4"
       }
     },
     {

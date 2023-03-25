@@ -3,6 +3,7 @@
 // Copyright (c) 2015-2022 Alexander Grebenyuk (github.com/kean).
 
 import SwiftUI
+import Nuke
 import NukeUI
 
 @MainActor
@@ -40,7 +41,6 @@ struct LazyImageDemoView: View {
     // This is where the image view is created.
     func makeImage(url: URL) -> some View {
         LazyImage(url: url)
-            .animation(.default)
             .pipeline(pipeline)
             .frame(height: 320)
     }

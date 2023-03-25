@@ -494,7 +494,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
@@ -502,7 +502,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Pulse";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
