@@ -46,7 +46,9 @@ struct LazyImageDemoView: View {
     // This is where the image view is created.
     func makeImage(url: URL) -> some View {
         LazyImage(url: url) { state in
-            if let image = state.image {
+            if let container = state.imageContainer, container.type ==  .gif, let data = container.data {
+                GIFImage(data: data)
+            } else if let image = state.image {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
