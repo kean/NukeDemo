@@ -30,7 +30,7 @@
 		0CCC189A209EDCCF003D7172 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC188F209EDCCF003D7172 /* Utilities.swift */; };
 		0CCC189C209EDCCF003D7172 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC1892209EDCCF003D7172 /* MenuViewController.swift */; };
 		0CCC189D209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC1893209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift */; };
-		0CCC18A3209EE0A6003D7172 /* AnimatedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC18A2209EE0A6003D7172 /* AnimatedImageViewController.swift */; };
+		0CCC18A3209EE0A6003D7172 /* GifuDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC18A2209EE0A6003D7172 /* GifuDemoViewController.swift */; };
 		0CCC18A8209EE341003D7172 /* AlamofireIntegrationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC18A7209EE341003D7172 /* AlamofireIntegrationDemoViewController.swift */; };
 		0CCF787F28A03BDC00C431E5 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCF787E28A03BDC00C431E5 /* PulseUI */; };
 		0CD878972431108200DE301A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD878962431108200DE301A /* Images.swift */; };
@@ -60,7 +60,7 @@
 		0CCC188F209EDCCF003D7172 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0CCC1892209EDCCF003D7172 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0CCC1893209EDCCF003D7172 /* ProgressiveDecodingDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressiveDecodingDemoViewController.swift; sourceTree = "<group>"; };
-		0CCC18A2209EE0A6003D7172 /* AnimatedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageViewController.swift; sourceTree = "<group>"; };
+		0CCC18A2209EE0A6003D7172 /* GifuDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifuDemoViewController.swift; sourceTree = "<group>"; };
 		0CCC18A7209EE341003D7172 /* AlamofireIntegrationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireIntegrationDemoViewController.swift; sourceTree = "<group>"; };
 		0CD878962431108200DE301A /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		0CE5F686215688590046609F /* PrefetchingDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefetchingDemoViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				0CCC1892209EDCCF003D7172 /* MenuViewController.swift */,
 				0CCC1887209EDCCF003D7172 /* BasicDemoViewController.swift */,
 				0C4388A722AC060F007906A7 /* ImageProcessingDemoViewController.swift */,
-				0CCC18A2209EE0A6003D7172 /* AnimatedImageViewController.swift */,
+				0CCC18A2209EE0A6003D7172 /* GifuDemoViewController.swift */,
 				0CBBB09A20A8116C007474D2 /* AnimatedImageUsingVideoViewController.swift */,
 				0CCC18A7209EE341003D7172 /* AlamofireIntegrationDemoViewController.swift */,
 				0CE5F686215688590046609F /* PrefetchingDemoViewController.swift */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CCC18A3209EE0A6003D7172 /* AnimatedImageViewController.swift in Sources */,
+				0CCC18A3209EE0A6003D7172 /* GifuDemoViewController.swift in Sources */,
 				0C4878AA22A84E9700CFCFE7 /* ImagePipelineSettingsViewController.swift in Sources */,
 				0C880537242EB74B00F8C5B3 /* SwiftSVGDemoViewController.swift in Sources */,
 				0CCC1899209EDCCF003D7172 /* AppDelegate.swift in Sources */,

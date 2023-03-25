@@ -5,9 +5,7 @@
 import UIKit
 import NukeUI
 
-// MARK: - AnimatedImageViewController
-
-final class AnimatedImageViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+final class GifuDemoViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }

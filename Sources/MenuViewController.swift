@@ -60,7 +60,7 @@ final class MenuViewController: UITableViewController {
             MenuItem(
                 title: "Gifu",
                 subtitle: "Display animated GIFs",
-                action: { [weak self] in self?.push(AnimatedImageViewController(), $0) }
+                action: { [weak self] in self?.push(GifuDemoViewController(), $0) }
             ),
             MenuItem(
                 title: "SwiftSVG",
