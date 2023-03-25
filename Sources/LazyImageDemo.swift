@@ -21,11 +21,16 @@ struct LazyImageDemoView: View {
 
     var body: some View {
         List(items) { item in
-            VStack(spacing: 16) {
+            let view = VStack(spacing: 16) {
                 Text(item.title)
                     .font(.headline)
                     .padding(.top, 32)
                 makeImage(url: item.url)
+            }.listRowInsets(EdgeInsets(.zero))
+            if #available(iOS 15, *) {
+                view.listRowSeparator(.hidden)
+            } else {
+                view
             }
         }
         .id(listId)
@@ -35,12 +40,20 @@ struct LazyImageDemoView: View {
         }, label: {
             Image(systemName: "arrow.clockwise")
         }))
-        .listStyle(PlainListStyle())
+        .listStyle(.plain)
     }
 
     // This is where the image view is created.
     func makeImage(url: URL) -> some View {
-        LazyImage(url: url)
+        LazyImage(url: url) { state in
+            if let image = state.image {
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            } else {
+                Color.gray.opacity(0.2) // Placeholder
+            }
+        }
             .pipeline(pipeline)
             .frame(height: 320)
     }
