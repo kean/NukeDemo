@@ -71,6 +71,5 @@ private let allItems = [
     Item(title: "Baseline JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257591-80e2e580-c25e-11eb-8032-54f3a966aedb.jpeg")!),
     Item(title: "Progressive JPEG", url: URL(string: "https://user-images.githubusercontent.com/1567433/120257587-7fb1b880-c25e-11eb-93d1-7e7df2b9f5ca.jpeg")!),
     Item(title: "Animated GIF", url: URL(string: "https://cloud.githubusercontent.com/assets/1567433/6505557/77ff05ac-c2e7-11e4-9a09-ce5b7995cad0.gif")!),
-    Item(title: "MP4 (Video)", url: URL(string: "https://kean.github.io/videos/cat_video.mp4")!),
     Item(title: "WebP", url: URL(string: "https://kean.github.io/images/misc/4.webp")!)
 ]
