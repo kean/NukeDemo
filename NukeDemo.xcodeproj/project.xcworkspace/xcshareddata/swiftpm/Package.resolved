@@ -10,12 +10,21 @@
       }
     },
     {
+      "identity" : "gifu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kaishin/Gifu",
+      "state" : {
+        "revision" : "82da0086dea14ca9afc9801234ad8dc4cd9e2738",
+        "version" : "3.4.1"
+      }
+    },
+    {
       "identity" : "nuke",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke",
       "state" : {
         "branch" : "main",
-        "revision" : "88f73104e35abbb85d12c0921f72bd99651812e2"
+        "revision" : "6b87e10134a1eae733ba59f50ed3b9e94c0afa61"
       }
     },
     {

@@ -4,6 +4,7 @@
 
 import UIKit
 import NukeUI
+import Gifu
 
 final class GifuDemoViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
@@ -74,6 +75,14 @@ private final class AnimatedImageCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         imageView = LazyImageView()
+        imageView.makeImageView = { container in
+            if container.type == .gif, let data = container.data {
+                let view = GIFImageView()
+                view.animate(withGIFData: data)
+                return view
+            }
+            return nil
+        }
         imageView.placeholderView = UIActivityIndicatorView(style: .medium)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
