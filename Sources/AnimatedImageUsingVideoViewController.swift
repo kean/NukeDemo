@@ -5,10 +5,19 @@
 import UIKit
 import Nuke
 import NukeUI
-
-// MARK: - AnimatedImageUsingVideoViewController
+import NukeVideo
+import AVFoundation
 
 final class AnimatedImageUsingVideoViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    private let pipeline = ImagePipeline {
+        $0.makeImageDecoder = {
+            ImageDecoders.Video(context: $0)
+
+            // Use ImageDecoderRegistory to add the decoder to the
+            // ImageDecoderRegistry.shared.register(ImageDecoders.Video.init)
+        }
+    }
+
     override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
@@ -40,6 +49,7 @@ final class AnimatedImageUsingVideoViewController: UICollectionViewController, U
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageCellReuseID, for: indexPath) as! VideoCell
+        cell.imageView.pipeline = pipeline
         cell.setVideo(with: imageURLs[indexPath.row])
         return cell
     }
@@ -61,7 +71,7 @@ private let imageURLs = [
 
 /// - warning: This is proof of concept, please don't use in production.
 private final class VideoCell: UICollectionViewCell {
-    private let imageView = LazyImageView()
+    let imageView = LazyImageView()
 
     deinit {
         prepareForReuse()
@@ -71,6 +81,16 @@ private final class VideoCell: UICollectionViewCell {
         super.init(frame: frame)
 
         backgroundColor = UIColor(white: 235.0 / 255.0, alpha: 1.0)
+
+        imageView.makeImageView = { container in
+            if let type = container.type, type.isVideo, let asset = container.userInfo[.videoAssetKey] as? AVAsset {
+                let view = VideoPlayerView()
+                view.asset = asset
+                view.play()
+                return view
+            }
+            return nil
+        }
 
         contentView.addSubview(imageView)
         imageView.pinToSuperview()
