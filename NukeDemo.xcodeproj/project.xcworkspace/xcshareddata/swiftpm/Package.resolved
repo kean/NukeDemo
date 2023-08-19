@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire",
       "state" : {
-        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
-        "version" : "5.6.4"
+        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
+        "version" : "5.7.1"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/kean/Nuke",
       "state" : {
         "branch" : "main",
-        "revision" : "f4d9b95788679d0654c032961f73e7e9c16ca6b4"
+        "revision" : "1cfafaee2264fb525dd8f087e6f4e6d4969bd022"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/kean/Pulse",
       "state" : {
         "branch" : "main",
-        "revision" : "5825eab1faf61865745beb43906e2b82cf4a68a4"
+        "revision" : "b3a3361a52f02fc0aa322931e261470e0d498e6f"
       }
     },
     {

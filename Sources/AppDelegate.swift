@@ -13,5 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidFinishLaunching(_ application: UIApplication) {
         window?.tintColor = UIColor.systemPink
         ImagePipeline.Configuration.isSignpostLoggingEnabled = true
+
+        if #available(iOS 16, *) {
+            print(URL.cachesDirectory)
+        }
     }
 }
