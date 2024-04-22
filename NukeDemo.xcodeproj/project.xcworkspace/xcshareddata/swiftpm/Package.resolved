@@ -1,12 +1,13 @@
 {
+  "originHash" : "2f456449c38e4813f4b9b3fdfc018ebed1c3bada5f3159b077c9f36e84e0300b",
   "pins" : [
     {
       "identity" : "alamofire",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire",
       "state" : {
-        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
-        "version" : "5.7.1"
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
       }
     },
     {
@@ -24,7 +25,7 @@
       "location" : "https://github.com/kean/Nuke",
       "state" : {
         "branch" : "main",
-        "revision" : "1cfafaee2264fb525dd8f087e6f4e6d4969bd022"
+        "revision" : "6b9558490b75acc53119bcce267800ca5201a64b"
       }
     },
     {
@@ -33,7 +34,7 @@
       "location" : "https://github.com/kean/Pulse",
       "state" : {
         "branch" : "main",
-        "revision" : "b3a3361a52f02fc0aa322931e261470e0d498e6f"
+        "revision" : "968d9b910d958543d51fe19c5f2c1e0f171573d7"
       }
     },
     {
@@ -46,5 +47,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

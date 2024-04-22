@@ -124,8 +124,6 @@ final class ImagePipelineSettingsViewController: UITableViewController {
 
         queueDataLoadingValueLabel.text = "\(configuration.dataLoadingQueue.maxConcurrentOperationCount)"
         queueDataLoadingStepper.value = Double(configuration.dataLoadingQueue.maxConcurrentOperationCount)
-        queueDataCachingValueLabel.text = "\(configuration.dataCachingQueue.maxConcurrentOperationCount)"
-        queueDataCachingStepper.value = Double(configuration.dataCachingQueue.maxConcurrentOperationCount)
         queueDecodingValueLabel.text = "\(configuration.imageDecodingQueue.maxConcurrentOperationCount)"
         queueDecodingStepper.value = Double(configuration.imageDecodingQueue.maxConcurrentOperationCount)
         queueEncodingValueLabel.text = "\(configuration.imageEncodingQueue.maxConcurrentOperationCount)"
@@ -263,11 +261,6 @@ final class ImagePipelineSettingsViewController: UITableViewController {
 
     @IBAction func stepperDataLoadingQueueValueChanged(_ sender: UIStepper) {
         configuration.dataLoadingQueue.maxConcurrentOperationCount = Int(sender.value)
-        reload()
-    }
-
-    @IBAction func stepperDataCachingQueueValueChanged(_ sender: UIStepper) {
-        configuration.dataCachingQueue.maxConcurrentOperationCount = Int(sender.value)
         reload()
     }
 
