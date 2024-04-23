@@ -8,8 +8,8 @@ import NukeExtensions
 
 final class ProgressiveDecodingDemoViewController: UIViewController {
     private let urls = [
-        URL(string: "_mock_loader://progressive")!,
-        URL(string: "_mock_loader://baseline")!
+        URL(string: "mock-loader://progressive")!,
+        URL(string: "mock-loader://baseline")!
     ]
 
     private let pipeline = ImagePipeline {
