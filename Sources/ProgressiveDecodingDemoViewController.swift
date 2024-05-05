@@ -59,6 +59,7 @@ final class ProgressiveDecodingDemoViewController: UIViewController {
         // Use our custom pipeline with progressive decoding enabled and
         // _MockDataLoader which returns data on predifined intervals.
         options.pipeline = pipeline
+        options.isProgressiveRenderingEnabled = segmentedControl.selectedSegmentIndex == 0
         options.transition = .fadeIn(duration: 0.25)
 
         loadImage(
