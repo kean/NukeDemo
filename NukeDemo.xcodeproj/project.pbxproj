@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0C063F9126651F000018F2C2 /* LazyImageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageDemo.swift; sourceTree = "<group>"; };
 		0C1B4BAD2618D0100095E7F7 /* PrefetchSwiftUIDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefetchSwiftUIDemo.swift; sourceTree = "<group>"; };
+		0C2797D42F5357B400F96DB1 /* Nuke */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Nuke; path = ../Nuke; sourceTree = SOURCE_ROOT; };
 		0C3ADAA12087D23C00FFA275 /* progressive.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = progressive.jpeg; sourceTree = "<group>"; };
 		0C3ADAA22087D23C00FFA275 /* baseline.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baseline.jpeg; sourceTree = "<group>"; };
 		0C4388A722AC060F007906A7 /* ImageProcessingDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingDemoViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				0C2797D42F5357B400F96DB1 /* Nuke */,
 				0CCC1886209EDCCF003D7172 /* Sources */,
 				0C3ADAA02087D23C00FFA275 /* Resources */,
 				607FACD11AFB9204008FA782 /* Products */,
