@@ -29,40 +29,55 @@ public final class AlamofireDataLoader: Nuke.DataLoading {
 
     // MARK: DataLoading
 
-    /// Loads data using Alamofire.SessionManager.
-    public func loadData(with request: URLRequest, didReceiveData: @escaping (Data, URLResponse) -> Void, completion: @escaping (Error?) -> Void) -> Cancellable {
-        // Alamofire.SessionManager automatically starts requests as soon as they are created (see `startRequestsImmediately`)
+    // TODO: Simplify DataLoading protocol to better accomodate Alamofire
+
+    /// Loads data using Alamofire.Session.
+    public func loadData(with request: URLRequest) async throws -> (AsyncThrowingStream<Data, any Swift.Error>, URLResponse) {
         let task = self.session.streamRequest(request)
-        task.responseStream { [weak task] stream in
-            switch stream.event {
-            case let .stream(result):
-                switch result {
-                case let .success(data):
-                    guard let response = task?.response else { return } // Never nil
-                    didReceiveData(data, response)
+        return try await withTaskCancellationHandler {
+            try await withUnsafeThrowingContinuation { (continuation: UnsafeContinuation<(AsyncThrowingStream<Data, any Swift.Error>, URLResponse), any Swift.Error>) in
+                var streamContinuation: AsyncThrowingStream<Data, any Swift.Error>.Continuation?
+                var didResume = false
+
+                let stream = AsyncThrowingStream<Data, any Swift.Error> { cont in
+                    streamContinuation = cont
                 }
-            case let .complete(response):
-                completion(response.error)
+
+                task.responseStream { [weak task] streamEvent in
+                    switch streamEvent.event {
+                    case let .stream(result):
+                        switch result {
+                        case let .success(data):
+                            if !didResume, let response = task?.response {
+                                didResume = true
+                                continuation.resume(returning: (stream, response))
+                            }
+                            streamContinuation?.yield(data)
+                        }
+                    case let .complete(completion):
+                        if let error = completion.error {
+                            if didResume {
+                                streamContinuation?.finish(throwing: error)
+                            } else {
+                                continuation.resume(throwing: error)
+                            }
+                        } else {
+                            if !didResume {
+                                if let response = task?.response {
+                                    didResume = true
+                                    continuation.resume(returning: (stream, response))
+                                } else {
+                                    continuation.resume(throwing: URLError(.badServerResponse))
+                                    didResume = true
+                                }
+                            }
+                            streamContinuation?.finish()
+                        }
+                    }
+                }
             }
-        }
-        return AnyCancellable {
+        } onCancel: {
             task.cancel()
         }
-    }
-
-    public func removeData(for request: URLRequest) {
-        // Do nothing
-    }
-}
-
-private final class AnyCancellable: Nuke.Cancellable {
-    let closure: @Sendable () -> Void
-
-    init(_ closure: @Sendable @escaping () -> Void) {
-        self.closure = closure
-    }
-
-    func cancel() {
-        closure()
     }
 }
