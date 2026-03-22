@@ -140,21 +140,34 @@ private final class ProgressiveImageView: UIView {
 }
 
 private final class _MockDataLoader: DataLoading {
-    func loadData(with request: URLRequest) async throws -> (AsyncThrowingStream<Data, any Error>, URLResponse) {
+    private final class _MockTask: Cancellable {
+        func cancel() { }
+    }
+
+    func loadData(with request: URLRequest, didReceiveData: @escaping (Data, URLResponse) -> Void, completion: @escaping (Error?) -> Void) -> Cancellable {
         let data = _data(for: request)
         let chunks = _createChunks(for: data, size: 10240)
         let response = URLResponse(url: request.url!, mimeType: "image/jpeg", expectedContentLength: data.count, textEncodingName: nil)
-        try await Task.sleep(nanoseconds: 100_000_000) // 100ms
-        let stream = AsyncThrowingStream<Data, any Error> { continuation in
-            Task {
-                for chunk in chunks {
-                    continuation.yield(chunk)
-                    try await Task.sleep(nanoseconds: 100_000_000) // 100ms
-                }
-                continuation.finish()
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [weak self] in
+            self?._sendData(chunks, didReceiveData: { didReceiveData($0, response) }, completion: completion)
         }
-        return (stream, response)
+        return _MockTask()
+    }
+
+    func removeData(for request: URLRequest) {
+        // Do nothing
+    }
+
+    private func _sendData(_ data: [Data], didReceiveData: @escaping (Data) -> Void, completion: @escaping (Error?) -> Void) {
+        guard !data.isEmpty else {
+            completion(nil)
+            return
+        }
+        let (x, xs) = (data[0], Array(data.dropFirst()))
+        didReceiveData(x)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [weak self] in
+            self?._sendData(xs, didReceiveData: didReceiveData, completion: completion)
+        }
     }
 
     private func _data(for request: URLRequest) -> Data {
