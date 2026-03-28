@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidFinishLaunching(_ application: UIApplication) {
         window?.tintColor = UIColor.systemPink
         ImagePipeline.Configuration.isSignpostLoggingEnabled = true
+        
+        ImageDecoderRegistry.shared.register(ImageDecoders.Video.init)
 
         if #available(iOS 16, *) {
             print(URL.cachesDirectory)
